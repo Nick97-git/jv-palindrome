@@ -21,6 +21,8 @@ public class Palindrome {
      * <p>Результат: true</p>
      */
     public boolean isPalindrome(String text) {
-        return false;
+        String cleanWord = text.toLowerCase().replaceAll("[^a-z0-9]","");
+        String reverseWord = new StringBuilder(cleanWord).reverse().toString();
+        return cleanWord.equals(reverseWord);
     }
 }
